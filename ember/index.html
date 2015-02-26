@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='art-app'>
+<head>
+	<meta charset="UTF-8">
+	<title>Ember Example</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<!-- In Ember we need to create some templates for our view -->
+	<script type="text/x-handlebars" data-template-name="index">
+	    <main class="main-section">
+			<header class="main-header">
+				<h1>Rijks Museum</h1>
+				<div class="search-box">
+					<!-- Here we are using a HTMLbars template helper for our 
+					text input, not the value=searchQuery this will be used 
+					to get the value of this later on, this is automatically 
+					bound to the controllers and routes -->
+					{{input type="text" value=searchQuery}}
+					<!--Disclaimer, this should be a HTMLbars helper but I could not get it to work!?
+						However we use the action template tag to say when this gets clicked
+						Call this action -->
+					<input type="submit" value="Search" {{ action "searchArt"}}>
+				</div>
+			</header>
+			<section class="art-work">
+				<!-- Much like Angular, Ember has a way to loop though items
+				 	 In our template -->
+				{{#each item in model}}
+					<!-- And much like Angular we can conditionally check to see if 
+						 something is there, otherwise we dont want to show it -->
+					{{#if item.webImage}}
+					<div class="art-item">
+						<!-- When working with attributes in Ember templates
+							 You need to make sure you use the special bind-attr
+						     tag, this way Ember is watching over them -->
+						<img {{bind-attr src=item.webImage.url}} alt="">
+						<p>{{item.longTitle}}</p>
+					</div>
+					{{/if}}
+				{{/each}}
+			</section>
+		</main>
+	</script>
+</head>
+<body>
+	<script src="js/libs/jquery-1.10.2.js"></script>
+	<script src="js/libs/ember-template-compiler-1.10.0.js"></script>
+	<script src="js/libs/ember-1.10.0.debug.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

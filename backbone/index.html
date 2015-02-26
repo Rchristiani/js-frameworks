@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Backbone Example</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<!-- Our main view template -->
+	<script type="text/template" id="main-template">
+		<header class="main-header">
+			<h1>Rijks Museum</h1>
+			<div class="search-box">
+				<input type="text">
+				<input type="submit" value="Search">
+			</div>
+		</header>
+		<section class="art-work">
+			
+		</section>
+	</script>
+
+	<!-- Our artwork view template -->
+	<script type="text/template" id="art-work">
+		<!-- Like Angular, Backbone lets us look conditionally on something 
+			 so we can display what we want --> 
+		<%if(webImage !== null) { %>
+			<div class="art-item">
+				<!-- We use this special template tag to output our data from the model
+					 passed in to the view  -->
+				<img src="<%= webImage.url %>" alt="">
+				<p><%= longTitle %></p>
+			</div>
+		<%}%>
+	</script>
+</head>
+<body>
+	<main class="main-section">
+		
+	</main>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
