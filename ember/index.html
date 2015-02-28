@@ -28,17 +28,20 @@
 					<!-- And much like Angular we can conditionally check to see if 
 						 something is there, otherwise we dont want to show it -->
 					{{#if item.webImage}}
-					<div class="art-item">
-						<!-- When working with attributes in Ember templates
-							 You need to make sure you use the special bind-attr
-						     tag, this way Ember is watching over them -->
-						<img {{bind-attr src=item.webImage.url}} alt="">
-						<p>{{item.longTitle}}</p>
-					</div>
+						{{art-work data=item}}
 					{{/if}}
 				{{/each}}
 			</section>
 		</main>
+	</script>
+	<script type="text/x-handlebars" data-template-name="components/art-work">
+		<div class="art-item">
+			<!-- When working with attributes in Ember templates
+				 You need to make sure you use the special bind-attr
+			     tag, this way Ember is watching over them -->
+			<img {{bind-attr src=data.webImage.url}} alt="">
+			<p>{{data.longTitle}}</p>
+		</div>
 	</script>
 </head>
 <body>
