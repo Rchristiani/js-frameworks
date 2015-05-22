@@ -1,5 +1,5 @@
 var app = {}
-app.apiKey = 'eO58IERD';
+app.apiKey = 'pUaGTYo5';
 app.apiUrl = 'https://www.rijksmuseum.nl/api/en/collection/?key=' + app.apiKey;
 //Our main view
 app.MainView = Backbone.View.extend({

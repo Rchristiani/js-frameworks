@@ -13,7 +13,7 @@ App.IndexRoute = Ember.Route.extend({
   		url: 'https://www.rijksmuseum.nl/api/en/collection/',
   		format: 'jsonp',
   		data : {
-  			key: 'eO58IERD'
+  			key: 'pUaGTYo5'
   		},
   	}).then(function(res) {
   		return res.artObjects;
@@ -32,7 +32,7 @@ App.IndexController = Ember.Controller.extend({
 		  		url: 'https://www.rijksmuseum.nl/api/en/collection/',
 		  		format: 'jsonp',
 		  		data : {
-		  			key: 'eO58IERD',
+		  			key: 'pUaGTYo5',
 		  			//searchQuery comes from our template as we 
 		  			//Define it as a value on an input in there
 		  			//This automatically gets bound to the controller and route

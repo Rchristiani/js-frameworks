@@ -21,7 +21,7 @@ app.controller('MainCtrl', function($scope,Art){
 });
 //Factory for getting the Art
 app.factory('Art', function($http,$q) {
-	var apiKey = 'eO58IERD';
+	var apiKey = 'pUaGTYo5';
 	var apiUrl = 'https://www.rijksmuseum.nl/api/en/collection/?key=' + apiKey;
 	
 	//Return an object with our methods 
