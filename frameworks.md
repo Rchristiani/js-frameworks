@@ -174,7 +174,7 @@ AngularJS:
 Node is a JavaScript "runtime", or platform for writing server side JavaScript applications. It has become extremely popular as of late. Companies like Walmart have large portions of there systems running on Node servers. When working with Node it is common to work with MongoDB and a Node framework called Express. When you use this with AngularJS this is called the MEAN stack.
 
 ###npm
-![NPM logo](imgs/npm-logo.svg)
+![NPM logo](imgs/npm-logo.png)
 
 Lets discuss npm for a moment. NPM stands for nifty procrastination machine, or normal people, mmm! or nobody publish monsters. Or what people often refer to it as Node Package Manger. 
 
@@ -242,6 +242,14 @@ alumni.getAlumniById = function(req,res) {
 We already discussed Angular in depth above, but to re-iterate. Angular is an MV* javascript framework that allows us to organize our applications more and more. There are certain conventions that are set in place to make this organization easy. It also takes care of a lot of things for us, so we can concentrate on writing our application. 
 
 
+###Resources
+For learning Node, Express and MongoDB.
+
+MongoDB - [MongoDB University](https://university.mongodb.com)
+All Three - [Scotch.io](https://scotch.io/)
+Node - [Nodeschool](http://nodeschool.io/)
+
+Build something! Take a simple idea and build something with it.
 
 
 
